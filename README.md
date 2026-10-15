@@ -36,7 +36,7 @@ python3 verktoy/importer.py "<sti>/RANDFALS.COM/Prosjekter"
 3. Bildeformat i galleriet: `full`, `halv` (to etter hverandre = par), `smal` eller `hoyre`.
 4. Rekkefølgen i `data.js` er rekkefølgen på siden.
 
-> Alt innhold nå er **plassholdere** (prosjektnavn, tekster, e-post og bilder). Bytt ut før lansering.
+> Prosjektene er ekte (importert). Ingressen, om-teksten og e-postadressen er fortsatt plassholdere.
 
 ## Design-justeringer (i `css/stil.css`, øverst)
 
