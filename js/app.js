@@ -189,7 +189,10 @@
     let html = "";
     for (let i = 0; i < bilder.length; i++) {
       const b = bilder[i];
-      const fig = (x, kl = "") => `<figure class="${kl} vis-ved-scroll">${bilde(x)}${x.tekst ? `<figcaption>${esc(x.tekst)}</figcaption>` : ""}</figure>`;
+      const media = (x) => x.type === "video"
+        ? `<video src="${esc(x.src)}"${x.plakat ? ` poster="${esc(x.plakat)}"` : ""}${x.w ? ` width="${x.w}" height="${x.h}"` : ""} muted loop playsinline autoplay preload="metadata"></video>`
+        : bilde(x);
+      const fig = (x, kl = "") => `<figure class="${kl} vis-ved-scroll">${media(x)}${x.tekst ? `<figcaption>${esc(x.tekst)}</figcaption>` : ""}</figure>`;
       if (b.format === "halv" && bilder[i + 1]?.format === "halv") {
         html += `<div class="g-par">${fig(b)}${fig(bilder[i + 1])}</div>`;
         i++;

@@ -13,7 +13,21 @@ Sort/hvitt, STORE BOKSTAVER, horisontal prosjektstripe på forsiden og vertikal 
 | `om.html` | Om, tjenester, lenker og kontakt |
 | `404.html` | Feilside |
 
-## Oppdatere innhold
+## Importere prosjekter fra mapper
+
+Prosjektene hentes fra `RANDFALS.COM/Prosjekter` på skrivebordet med `verktoy/importer.py`:
+
+```bash
+python3 verktoy/importer.py "<sti>/RANDFALS.COM/Prosjekter"
+```
+
+- Mappenavn: `ÅR_STED_BESKRIVELSE_KUNDE` (tittel = beskrivelse, undertittel = kunde) eller `ÅR_STED_BESKRIVELSE-VERKNAVN` (tittel = verknavn, undertittel = beskrivelse).
+- Bilder (JPEG/PNG), video (MP4/MOV) og PDF-sider blir galleri. Bilder skaleres til maks 2000 px, duplikater fjernes.
+- Første store bilde blir forsidebilde. Gi en fil navnet `forside.jpg` for å velge selv.
+- `.txt` blir prosjekttekst (tom linje = nytt avsnitt).
+- Om-teksten og ingressen i `data.js` røres ikke.
+
+## Oppdatere innhold manuelt
 
 **All tekst og alle prosjekter ligger i `js/data.js`.** Du trenger ikke røre noe annet.
 

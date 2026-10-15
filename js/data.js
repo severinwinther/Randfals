@@ -37,493 +37,486 @@ window.RANDFALS = {
     "epost": "post@randfals.no",
     "telefon": "",
     "bilde": {
-      "src": "img/graa-time/05.jpg",
-      "w": 1000,
-      "h": 1500,
-      "format": "smal",
-      "alt": ""
+      "src": "img/gjenbrukskjokken-sa-steinskulptur/01.jpg",
+      "w": 1209,
+      "h": 798,
+      "alt": "Gjenbrukskjøkken"
     }
   },
   "prosjekter": [
     {
-      "slug": "stille-rom",
-      "tittel": "Stille rom",
-      "undertittel": "Interiør",
-      "kategori": "Interiør",
+      "slug": "gjenbrukskjokken-sa-steinskulptur",
+      "tittel": "Gjenbrukskjøkken",
+      "undertittel": "Sa steinskulptur",
+      "kategori": "Gjenbrukskjøkken",
       "aar": 2026,
       "sted": "Oslo",
       "forside": {
-        "src": "img/stille-rom/01.jpg",
-        "w": 1200,
-        "h": 1600,
-        "alt": "Stille rom"
+        "src": "img/gjenbrukskjokken-sa-steinskulptur/01.jpg",
+        "w": 1209,
+        "h": 798,
+        "alt": "Gjenbrukskjøkken"
       },
-      "tekst": [
-        "Et prosjekt om presisjon, materialer og ro. Beskriv her hva oppgaven var, hvem den var for og hvilke valg som formet resultatet.",
-        "Andre avsnitt kan handle om prosess, produksjon og detaljer. Hold det kort — bildene bærer fortellingen."
-      ],
+      "tekst": [],
       "fakta": {
-        "Oppdragsgiver": "Privat",
-        "Materialer": "Eik, stål",
-        "Fotograf": "—"
+        "Kunde": "Sa steinskulptur"
       },
       "bilder": [
         {
-          "src": "img/stille-rom/02.jpg",
-          "w": 1800,
-          "h": 1012,
-          "format": "full",
-          "alt": ""
+          "src": "img/gjenbrukskjokken-sa-steinskulptur/02.jpg",
+          "w": 1025,
+          "h": 683,
+          "alt": "",
+          "format": "halv"
         },
         {
-          "src": "img/stille-rom/03.jpg",
-          "w": 1100,
-          "h": 1375,
-          "format": "halv",
-          "alt": ""
+          "src": "img/gjenbrukskjokken-sa-steinskulptur/03.jpg",
+          "w": 905,
+          "h": 517,
+          "alt": "",
+          "format": "halv"
         },
         {
-          "src": "img/stille-rom/04.jpg",
-          "w": 1100,
-          "h": 1375,
-          "format": "halv",
-          "alt": ""
+          "src": "img/gjenbrukskjokken-sa-steinskulptur/04.jpg",
+          "w": 1227,
+          "h": 809,
+          "alt": "",
+          "format": "halv"
         },
         {
-          "src": "img/stille-rom/05.jpg",
-          "w": 1000,
-          "h": 1500,
-          "format": "smal",
-          "alt": ""
+          "src": "img/gjenbrukskjokken-sa-steinskulptur/05.jpg",
+          "w": 1025,
+          "h": 683,
+          "alt": "",
+          "format": "halv"
         },
         {
-          "src": "img/stille-rom/06.jpg",
-          "w": 1800,
-          "h": 1200,
-          "format": "full",
-          "alt": ""
+          "src": "img/gjenbrukskjokken-sa-steinskulptur/06.jpg",
+          "w": 1536,
+          "h": 1152,
+          "alt": "",
+          "format": "full"
         }
-      ]
+      ],
+      "kilde": "2026_OSLO_GJENBRUKSKJØKKEN_SA STEINSKULPTUR"
     },
     {
-      "slug": "kant",
-      "tittel": "Kant",
-      "undertittel": "Møbel",
-      "kategori": "Møbel",
+      "slug": "hoggebord-vigelandsmuseet",
+      "tittel": "Hoggebord",
+      "undertittel": "Vigelandsmuseet",
+      "kategori": "Hoggebord",
       "aar": 2026,
-      "sted": "Bergen",
-      "forside": {
-        "src": "img/kant/01.jpg",
-        "w": 1200,
-        "h": 800,
-        "alt": "Kant"
-      },
-      "tekst": [
-        "Et prosjekt om presisjon, materialer og ro. Beskriv her hva oppgaven var, hvem den var for og hvilke valg som formet resultatet.",
-        "Andre avsnitt kan handle om prosess, produksjon og detaljer. Hold det kort — bildene bærer fortellingen."
-      ],
-      "fakta": {
-        "Oppdragsgiver": "Privat",
-        "Materialer": "Eik, stål",
-        "Fotograf": "—"
-      },
-      "bilder": [
-        {
-          "src": "img/kant/02.jpg",
-          "w": 1800,
-          "h": 1012,
-          "format": "full",
-          "alt": ""
-        },
-        {
-          "src": "img/kant/03.jpg",
-          "w": 1100,
-          "h": 1375,
-          "format": "halv",
-          "alt": ""
-        },
-        {
-          "src": "img/kant/04.jpg",
-          "w": 1100,
-          "h": 1375,
-          "format": "halv",
-          "alt": ""
-        },
-        {
-          "src": "img/kant/05.jpg",
-          "w": 1000,
-          "h": 1500,
-          "format": "smal",
-          "alt": ""
-        },
-        {
-          "src": "img/kant/06.jpg",
-          "w": 1800,
-          "h": 1200,
-          "format": "full",
-          "alt": ""
-        }
-      ]
-    },
-    {
-      "slug": "lysbrudd",
-      "tittel": "Lysbrudd",
-      "undertittel": "Objekt",
-      "kategori": "Objekt",
-      "aar": 2025,
       "sted": "Oslo",
       "forside": {
-        "src": "img/lysbrudd/01.jpg",
-        "w": 1200,
-        "h": 1500,
-        "alt": "Lysbrudd"
+        "src": "img/hoggebord-vigelandsmuseet/01.jpg",
+        "w": 1290,
+        "h": 1289,
+        "alt": "Hoggebord"
       },
-      "tekst": [
-        "Et prosjekt om presisjon, materialer og ro. Beskriv her hva oppgaven var, hvem den var for og hvilke valg som formet resultatet.",
-        "Andre avsnitt kan handle om prosess, produksjon og detaljer. Hold det kort — bildene bærer fortellingen."
-      ],
+      "tekst": [],
       "fakta": {
-        "Oppdragsgiver": "Privat",
-        "Materialer": "Eik, stål",
-        "Fotograf": "—"
+        "Kunde": "Vigelandsmuseet"
       },
       "bilder": [
         {
-          "src": "img/lysbrudd/02.jpg",
-          "w": 1800,
-          "h": 1012,
-          "format": "full",
-          "alt": ""
+          "src": "img/hoggebord-vigelandsmuseet/02.jpg",
+          "w": 2000,
+          "h": 2000,
+          "alt": "",
+          "format": "full"
         },
         {
-          "src": "img/lysbrudd/03.jpg",
-          "w": 1100,
-          "h": 1375,
-          "format": "halv",
-          "alt": ""
+          "src": "img/hoggebord-vigelandsmuseet/03.jpg",
+          "w": 2000,
+          "h": 2000,
+          "alt": "",
+          "format": "halv"
         },
         {
-          "src": "img/lysbrudd/04.jpg",
-          "w": 1100,
-          "h": 1375,
-          "format": "halv",
-          "alt": ""
+          "src": "img/hoggebord-vigelandsmuseet/04.jpg",
+          "w": 2000,
+          "h": 2000,
+          "alt": "",
+          "format": "halv"
         },
         {
-          "src": "img/lysbrudd/05.jpg",
-          "w": 1000,
-          "h": 1500,
-          "format": "smal",
-          "alt": ""
-        },
-        {
-          "src": "img/lysbrudd/06.jpg",
-          "w": 1800,
-          "h": 1200,
-          "format": "full",
-          "alt": ""
+          "src": "img/hoggebord-vigelandsmuseet/05.jpg",
+          "w": 1290,
+          "h": 1289,
+          "alt": "",
+          "format": "smal"
         }
-      ]
-    },
-    {
-      "slug": "vinterlys",
-      "tittel": "Vinterlys",
-      "undertittel": "Fotografi",
-      "kategori": "Fotografi",
-      "aar": 2025,
-      "sted": "Tromsø",
-      "forside": {
-        "src": "img/vinterlys/01.jpg",
-        "w": 1200,
-        "h": 1800,
-        "alt": "Vinterlys"
-      },
-      "tekst": [
-        "Et prosjekt om presisjon, materialer og ro. Beskriv her hva oppgaven var, hvem den var for og hvilke valg som formet resultatet.",
-        "Andre avsnitt kan handle om prosess, produksjon og detaljer. Hold det kort — bildene bærer fortellingen."
       ],
-      "fakta": {
-        "Oppdragsgiver": "Privat",
-        "Materialer": "Eik, stål",
-        "Fotograf": "—"
-      },
-      "bilder": [
-        {
-          "src": "img/vinterlys/02.jpg",
-          "w": 1800,
-          "h": 1012,
-          "format": "full",
-          "alt": ""
-        },
-        {
-          "src": "img/vinterlys/03.jpg",
-          "w": 1100,
-          "h": 1375,
-          "format": "halv",
-          "alt": ""
-        },
-        {
-          "src": "img/vinterlys/04.jpg",
-          "w": 1100,
-          "h": 1375,
-          "format": "halv",
-          "alt": ""
-        },
-        {
-          "src": "img/vinterlys/05.jpg",
-          "w": 1000,
-          "h": 1500,
-          "format": "smal",
-          "alt": ""
-        },
-        {
-          "src": "img/vinterlys/06.jpg",
-          "w": 1800,
-          "h": 1200,
-          "format": "full",
-          "alt": ""
-        }
-      ]
+      "kilde": "2026_OSLO_HOGGEBORD_VIGELANDSMUSEET"
     },
     {
-      "slug": "betong",
-      "tittel": "Betong",
-      "undertittel": "Arkitektur",
-      "kategori": "Arkitektur",
-      "aar": 2025,
-      "sted": "Stavanger",
-      "forside": {
-        "src": "img/betong/01.jpg",
-        "w": 1200,
-        "h": 1200,
-        "alt": "Betong"
-      },
-      "tekst": [
-        "Et prosjekt om presisjon, materialer og ro. Beskriv her hva oppgaven var, hvem den var for og hvilke valg som formet resultatet.",
-        "Andre avsnitt kan handle om prosess, produksjon og detaljer. Hold det kort — bildene bærer fortellingen."
-      ],
-      "fakta": {
-        "Oppdragsgiver": "Privat",
-        "Materialer": "Eik, stål",
-        "Fotograf": "—"
-      },
-      "bilder": [
-        {
-          "src": "img/betong/02.jpg",
-          "w": 1800,
-          "h": 1012,
-          "format": "full",
-          "alt": ""
-        },
-        {
-          "src": "img/betong/03.jpg",
-          "w": 1100,
-          "h": 1375,
-          "format": "halv",
-          "alt": ""
-        },
-        {
-          "src": "img/betong/04.jpg",
-          "w": 1100,
-          "h": 1375,
-          "format": "halv",
-          "alt": ""
-        },
-        {
-          "src": "img/betong/05.jpg",
-          "w": 1000,
-          "h": 1500,
-          "format": "smal",
-          "alt": ""
-        },
-        {
-          "src": "img/betong/06.jpg",
-          "w": 1800,
-          "h": 1200,
-          "format": "full",
-          "alt": ""
-        }
-      ]
-    },
-    {
-      "slug": "salt",
-      "tittel": "Salt",
-      "undertittel": "Identitet",
-      "kategori": "Identitet",
-      "aar": 2024,
-      "sted": "Lofoten",
-      "forside": {
-        "src": "img/salt/01.jpg",
-        "w": 1200,
-        "h": 900,
-        "alt": "Salt"
-      },
-      "tekst": [
-        "Et prosjekt om presisjon, materialer og ro. Beskriv her hva oppgaven var, hvem den var for og hvilke valg som formet resultatet.",
-        "Andre avsnitt kan handle om prosess, produksjon og detaljer. Hold det kort — bildene bærer fortellingen."
-      ],
-      "fakta": {
-        "Oppdragsgiver": "Privat",
-        "Materialer": "Eik, stål",
-        "Fotograf": "—"
-      },
-      "bilder": [
-        {
-          "src": "img/salt/02.jpg",
-          "w": 1800,
-          "h": 1012,
-          "format": "full",
-          "alt": ""
-        },
-        {
-          "src": "img/salt/03.jpg",
-          "w": 1100,
-          "h": 1375,
-          "format": "halv",
-          "alt": ""
-        },
-        {
-          "src": "img/salt/04.jpg",
-          "w": 1100,
-          "h": 1375,
-          "format": "halv",
-          "alt": ""
-        },
-        {
-          "src": "img/salt/05.jpg",
-          "w": 1000,
-          "h": 1500,
-          "format": "smal",
-          "alt": ""
-        },
-        {
-          "src": "img/salt/06.jpg",
-          "w": 1800,
-          "h": 1200,
-          "format": "full",
-          "alt": ""
-        }
-      ]
-    },
-    {
-      "slug": "fjordlinje",
-      "tittel": "Fjordlinje",
-      "undertittel": "Landskap",
-      "kategori": "Landskap",
-      "aar": 2024,
-      "sted": "Sogn",
-      "forside": {
-        "src": "img/fjordlinje/01.jpg",
-        "w": 1200,
-        "h": 1600,
-        "alt": "Fjordlinje"
-      },
-      "tekst": [
-        "Et prosjekt om presisjon, materialer og ro. Beskriv her hva oppgaven var, hvem den var for og hvilke valg som formet resultatet.",
-        "Andre avsnitt kan handle om prosess, produksjon og detaljer. Hold det kort — bildene bærer fortellingen."
-      ],
-      "fakta": {
-        "Oppdragsgiver": "Privat",
-        "Materialer": "Eik, stål",
-        "Fotograf": "—"
-      },
-      "bilder": [
-        {
-          "src": "img/fjordlinje/02.jpg",
-          "w": 1800,
-          "h": 1012,
-          "format": "full",
-          "alt": ""
-        },
-        {
-          "src": "img/fjordlinje/03.jpg",
-          "w": 1100,
-          "h": 1375,
-          "format": "halv",
-          "alt": ""
-        },
-        {
-          "src": "img/fjordlinje/04.jpg",
-          "w": 1100,
-          "h": 1375,
-          "format": "halv",
-          "alt": ""
-        },
-        {
-          "src": "img/fjordlinje/05.jpg",
-          "w": 1000,
-          "h": 1500,
-          "format": "smal",
-          "alt": ""
-        },
-        {
-          "src": "img/fjordlinje/06.jpg",
-          "w": 1800,
-          "h": 1200,
-          "format": "full",
-          "alt": ""
-        }
-      ]
-    },
-    {
-      "slug": "graa-time",
-      "tittel": "Grå time",
-      "undertittel": "Portrett",
-      "kategori": "Portrett",
-      "aar": 2023,
+      "slug": "pausebord-sa-steinskulptur",
+      "tittel": "Pausebord",
+      "undertittel": "Sa steinskulptur",
+      "kategori": "Pausebord",
+      "aar": 2026,
       "sted": "Oslo",
       "forside": {
-        "src": "img/graa-time/01.jpg",
-        "w": 1200,
-        "h": 1500,
-        "alt": "Grå time"
+        "src": "img/pausebord-sa-steinskulptur/01.jpg",
+        "w": 1507,
+        "h": 2000,
+        "alt": "Pausebord"
       },
-      "tekst": [
-        "Et prosjekt om presisjon, materialer og ro. Beskriv her hva oppgaven var, hvem den var for og hvilke valg som formet resultatet.",
-        "Andre avsnitt kan handle om prosess, produksjon og detaljer. Hold det kort — bildene bærer fortellingen."
-      ],
+      "tekst": [],
       "fakta": {
-        "Oppdragsgiver": "Privat",
-        "Materialer": "Eik, stål",
-        "Fotograf": "—"
+        "Kunde": "Sa steinskulptur"
       },
       "bilder": [
         {
-          "src": "img/graa-time/02.jpg",
-          "w": 1800,
-          "h": 1012,
-          "format": "full",
-          "alt": ""
+          "src": "img/pausebord-sa-steinskulptur/02.jpg",
+          "w": 1270,
+          "h": 1452,
+          "alt": "",
+          "format": "halv"
         },
         {
-          "src": "img/graa-time/03.jpg",
-          "w": 1100,
-          "h": 1375,
-          "format": "halv",
-          "alt": ""
+          "src": "img/pausebord-sa-steinskulptur/03.jpg",
+          "w": 1507,
+          "h": 2000,
+          "alt": "",
+          "format": "halv"
         },
         {
-          "src": "img/graa-time/04.jpg",
-          "w": 1100,
-          "h": 1375,
-          "format": "halv",
-          "alt": ""
+          "src": "img/pausebord-sa-steinskulptur/04.jpg",
+          "w": 1507,
+          "h": 2000,
+          "alt": "",
+          "format": "halv"
         },
         {
-          "src": "img/graa-time/05.jpg",
-          "w": 1000,
-          "h": 1500,
-          "format": "smal",
-          "alt": ""
+          "src": "img/pausebord-sa-steinskulptur/05.jpg",
+          "w": 1749,
+          "h": 2000,
+          "alt": "",
+          "format": "halv"
         },
         {
-          "src": "img/graa-time/06.jpg",
-          "w": 1800,
-          "h": 1200,
-          "format": "full",
-          "alt": ""
+          "src": "img/pausebord-sa-steinskulptur/06.jpg",
+          "w": 1749,
+          "h": 2000,
+          "alt": "",
+          "format": "halv"
+        },
+        {
+          "src": "img/pausebord-sa-steinskulptur/07.jpg",
+          "w": 1507,
+          "h": 2000,
+          "alt": "",
+          "format": "halv"
+        },
+        {
+          "type": "video",
+          "src": "img/pausebord-sa-steinskulptur/08.mp4",
+          "plakat": "img/pausebord-sa-steinskulptur/08-plakat.jpg",
+          "w": 720,
+          "h": 956,
+          "alt": "",
+          "format": "halv"
+        },
+        {
+          "type": "video",
+          "src": "img/pausebord-sa-steinskulptur/09.mp4",
+          "plakat": "img/pausebord-sa-steinskulptur/09-plakat.jpg",
+          "w": 716,
+          "h": 818,
+          "alt": "",
+          "format": "halv"
+        },
+        {
+          "type": "video",
+          "src": "img/pausebord-sa-steinskulptur/10.mp4",
+          "plakat": "img/pausebord-sa-steinskulptur/10-plakat.jpg",
+          "w": 720,
+          "h": 956,
+          "alt": "",
+          "format": "smal"
         }
-      ]
+      ],
+      "kilde": "2026_OSLO_PAUSEBORD_SA STEINSKULPTUR"
+    },
+    {
+      "slug": "portland",
+      "tittel": "Portland",
+      "undertittel": "Stuebord",
+      "kategori": "Stuebord",
+      "aar": 2026,
+      "sted": "Oslo",
+      "forside": {
+        "src": "img/portland/01.jpg",
+        "w": 2000,
+        "h": 1333,
+        "alt": "Portland"
+      },
+      "tekst": [],
+      "fakta": {},
+      "bilder": [
+        {
+          "src": "img/portland/02.jpg",
+          "w": 2000,
+          "h": 1333,
+          "alt": "",
+          "format": "full"
+        },
+        {
+          "src": "img/portland/03.jpg",
+          "w": 2000,
+          "h": 1333,
+          "alt": "",
+          "format": "halv"
+        },
+        {
+          "src": "img/portland/04.jpg",
+          "w": 2000,
+          "h": 1333,
+          "alt": "",
+          "format": "halv"
+        },
+        {
+          "src": "img/portland/05.jpg",
+          "w": 2000,
+          "h": 1333,
+          "alt": "",
+          "format": "full"
+        },
+        {
+          "src": "img/portland/06.jpg",
+          "w": 2000,
+          "h": 1333,
+          "alt": "",
+          "format": "halv"
+        },
+        {
+          "src": "img/portland/07.jpg",
+          "w": 2000,
+          "h": 1333,
+          "alt": "",
+          "format": "halv"
+        }
+      ],
+      "kilde": "2026_OSLO_STUEBORD-PORTLAND"
+    },
+    {
+      "slug": "utstilling-sa-steinskulptur",
+      "tittel": "Utstilling",
+      "undertittel": "Sa steinskulptur",
+      "kategori": "Utstilling",
+      "aar": 2026,
+      "sted": "Oslo",
+      "forside": {
+        "src": "img/utstilling-sa-steinskulptur/02.jpg",
+        "w": 2000,
+        "h": 1393,
+        "alt": "Utstilling"
+      },
+      "tekst": [],
+      "fakta": {
+        "Kunde": "Sa steinskulptur"
+      },
+      "bilder": [
+        {
+          "src": "img/utstilling-sa-steinskulptur/01.jpg",
+          "w": 890,
+          "h": 619,
+          "alt": "",
+          "format": "halv"
+        },
+        {
+          "src": "img/utstilling-sa-steinskulptur/03.jpg",
+          "w": 2000,
+          "h": 1393,
+          "alt": "",
+          "format": "halv"
+        },
+        {
+          "src": "img/utstilling-sa-steinskulptur/04.jpg",
+          "w": 2000,
+          "h": 1393,
+          "alt": "",
+          "format": "full"
+        },
+        {
+          "src": "img/utstilling-sa-steinskulptur/05.jpg",
+          "w": 2000,
+          "h": 1393,
+          "alt": "",
+          "format": "halv"
+        },
+        {
+          "src": "img/utstilling-sa-steinskulptur/06.jpg",
+          "w": 2000,
+          "h": 1393,
+          "alt": "",
+          "format": "halv"
+        },
+        {
+          "src": "img/utstilling-sa-steinskulptur/07.jpg",
+          "w": 2000,
+          "h": 1393,
+          "alt": "",
+          "format": "full"
+        },
+        {
+          "src": "img/utstilling-sa-steinskulptur/08.jpg",
+          "w": 2000,
+          "h": 1393,
+          "alt": "",
+          "format": "full"
+        }
+      ],
+      "kilde": "2026_OSLO_UTSTILLING_SA STEINSKULPTUR"
+    },
+    {
+      "slug": "vannstasjon-sa-steinskulptur",
+      "tittel": "Vannstasjon",
+      "undertittel": "Sa steinskulptur",
+      "kategori": "Vannstasjon",
+      "aar": 2026,
+      "sted": "Oslo",
+      "forside": {
+        "src": "img/vannstasjon-sa-steinskulptur/01.jpg",
+        "w": 2000,
+        "h": 1333,
+        "alt": "Vannstasjon"
+      },
+      "tekst": [],
+      "fakta": {
+        "Kunde": "Sa steinskulptur"
+      },
+      "bilder": [
+        {
+          "src": "img/vannstasjon-sa-steinskulptur/02.jpg",
+          "w": 2000,
+          "h": 1339,
+          "alt": "",
+          "format": "full"
+        },
+        {
+          "src": "img/vannstasjon-sa-steinskulptur/03.jpg",
+          "w": 2000,
+          "h": 1339,
+          "alt": "",
+          "format": "halv"
+        },
+        {
+          "src": "img/vannstasjon-sa-steinskulptur/04.jpg",
+          "w": 2000,
+          "h": 1333,
+          "alt": "",
+          "format": "halv"
+        },
+        {
+          "src": "img/vannstasjon-sa-steinskulptur/05.jpg",
+          "w": 2000,
+          "h": 1333,
+          "alt": "",
+          "format": "full"
+        },
+        {
+          "src": "img/vannstasjon-sa-steinskulptur/06.jpg",
+          "w": 2000,
+          "h": 1339,
+          "alt": "",
+          "format": "halv"
+        },
+        {
+          "src": "img/vannstasjon-sa-steinskulptur/07.jpg",
+          "w": 2000,
+          "h": 1333,
+          "alt": "",
+          "format": "halv"
+        },
+        {
+          "type": "video",
+          "src": "img/vannstasjon-sa-steinskulptur/08.mp4",
+          "plakat": "img/vannstasjon-sa-steinskulptur/08-plakat.jpg",
+          "w": 1072,
+          "h": 718,
+          "alt": "",
+          "format": "halv"
+        },
+        {
+          "type": "video",
+          "src": "img/vannstasjon-sa-steinskulptur/09.mp4",
+          "plakat": "img/vannstasjon-sa-steinskulptur/09-plakat.jpg",
+          "w": 1072,
+          "h": 718,
+          "alt": "",
+          "format": "halv"
+        },
+        {
+          "type": "video",
+          "src": "img/vannstasjon-sa-steinskulptur/10.mp4",
+          "plakat": "img/vannstasjon-sa-steinskulptur/10-plakat.jpg",
+          "w": 1072,
+          "h": 718,
+          "alt": "",
+          "format": "halv"
+        },
+        {
+          "type": "video",
+          "src": "img/vannstasjon-sa-steinskulptur/11.mp4",
+          "plakat": "img/vannstasjon-sa-steinskulptur/11-plakat.jpg",
+          "w": 1072,
+          "h": 718,
+          "alt": "",
+          "format": "halv"
+        }
+      ],
+      "kilde": "2026_OSLO_VANNSTASJON_SA STEINSKULPTUR"
+    },
+    {
+      "slug": "verksted-sa-steinskulptur",
+      "tittel": "Verksted",
+      "undertittel": "Sa steinskulptur",
+      "kategori": "Verksted",
+      "aar": 2026,
+      "sted": "Oslo",
+      "forside": {
+        "src": "img/verksted-sa-steinskulptur/01.jpg",
+        "w": 2000,
+        "h": 1333,
+        "alt": "Verksted"
+      },
+      "tekst": [],
+      "fakta": {
+        "Kunde": "Sa steinskulptur"
+      },
+      "bilder": [
+        {
+          "src": "img/verksted-sa-steinskulptur/02.jpg",
+          "w": 2000,
+          "h": 1333,
+          "alt": "",
+          "format": "full"
+        },
+        {
+          "src": "img/verksted-sa-steinskulptur/03.jpg",
+          "w": 2000,
+          "h": 1333,
+          "alt": "",
+          "format": "halv"
+        },
+        {
+          "src": "img/verksted-sa-steinskulptur/04.jpg",
+          "w": 2000,
+          "h": 1333,
+          "alt": "",
+          "format": "halv"
+        },
+        {
+          "src": "img/verksted-sa-steinskulptur/05.jpg",
+          "w": 2000,
+          "h": 1333,
+          "alt": "",
+          "format": "full"
+        }
+      ],
+      "kilde": "2026_OSLO_VERKSTED_SA STEINSKULPTUR"
     }
   ]
 };
