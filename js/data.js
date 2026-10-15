@@ -394,6 +394,50 @@ window.RANDFALS = {
       "kilde": "2026_OSLO_STUEBORD-PORTLAND"
     },
     {
+      "slug": "tak-sa-steinskulptur",
+      "tittel": "Tak",
+      "undertittel": "Sa steinskulptur",
+      "kategori": "Tak",
+      "aar": 2026,
+      "sted": "Oslo",
+      "forside": {
+        "src": "img/tak-sa-steinskulptur/01.jpg",
+        "w": 2000,
+        "h": 1333,
+        "alt": "Tak"
+      },
+      "tekst": [
+        "Et prosjekt vi tegnet og bygget sommeren 2026. Etter en storm bygget vi et nytt og mer solid tak som gir ly til både steiner og steinhoggere."
+      ],
+      "fakta": {
+        "Kunde": "Sa steinskulptur"
+      },
+      "bilder": [
+        {
+          "src": "img/tak-sa-steinskulptur/02.jpg",
+          "w": 2000,
+          "h": 1333,
+          "alt": "",
+          "format": "full"
+        },
+        {
+          "src": "img/tak-sa-steinskulptur/03.jpg",
+          "w": 2000,
+          "h": 1333,
+          "alt": "",
+          "format": "halv"
+        },
+        {
+          "src": "img/tak-sa-steinskulptur/04.jpg",
+          "w": 2000,
+          "h": 1333,
+          "alt": "",
+          "format": "halv"
+        }
+      ],
+      "kilde": "2026_OSLO_TAK_SA STEINSKULPTUR"
+    },
+    {
       "slug": "utstilling-sa-steinskulptur",
       "tittel": "Utstilling",
       "undertittel": "Sa steinskulptur",
