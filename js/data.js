@@ -53,11 +53,16 @@ window.RANDFALS = {
       "sted": "Oslo",
       "forside": {
         "src": "img/gjenbrukskjokken-sa-steinskulptur/01.jpg",
-        "w": 1209,
-        "h": 798,
+        "w": 1025,
+        "h": 683,
         "alt": "Gjenbrukskjøkken"
       },
-      "tekst": [],
+      "tekst": [
+        "Kjøkken for Steinskulptur",
+        "Gjennom kontakt med ombygg.no & Oslobygg (vibyggeroslo )fikk vi mulighet til å overta ett kjøkken og gi det et nytt liv på verkstedet.",
+        "Den opprinnelige innredningen er demontert, tilpasset og bygget om til en enklere og mer åpen løsning. Overskuddsmarmor fra verkstedet er brukt som steinplate og integrert som en del av kjøkkenet.",
+        "Rommet brukes i forbindelse med kurs og arbeid ved Steinskulptur. Materialene og detaljene er derfor valgt med tanke på et miljø der støv, stein og hard bruk er en del av hverdagen."
+      ],
       "fakta": {
         "Kunde": "Sa steinskulptur"
       },
@@ -78,15 +83,15 @@ window.RANDFALS = {
         },
         {
           "src": "img/gjenbrukskjokken-sa-steinskulptur/04.jpg",
-          "w": 1227,
-          "h": 809,
+          "w": 1209,
+          "h": 798,
           "alt": "",
           "format": "halv"
         },
         {
           "src": "img/gjenbrukskjokken-sa-steinskulptur/05.jpg",
-          "w": 1025,
-          "h": 683,
+          "w": 1227,
+          "h": 809,
           "alt": "",
           "format": "halv"
         },
@@ -109,11 +114,14 @@ window.RANDFALS = {
       "sted": "Oslo",
       "forside": {
         "src": "img/hoggebord-vigelandsmuseet/01.jpg",
-        "w": 1290,
-        "h": 1289,
+        "w": 2000,
+        "h": 2000,
         "alt": "Hoggebord"
       },
-      "tekst": [],
+      "tekst": [
+        "Vi har fått lage benker til Vigeland-museet @vigelandmuseet , som skal brukes i et innføringskurs i steinhogging for ungdom.",
+        "Gøy å få bidra til å gi flere unge et første møte med håndverket. Gjennom @steinskulptur og kursholder @joelartcorreia"
+      ],
       "fakta": {
         "Kunde": "Vigelandsmuseet"
       },
@@ -134,8 +142,8 @@ window.RANDFALS = {
         },
         {
           "src": "img/hoggebord-vigelandsmuseet/04.jpg",
-          "w": 2000,
-          "h": 2000,
+          "w": 1290,
+          "h": 1289,
           "alt": "",
           "format": "halv"
         },
@@ -162,21 +170,23 @@ window.RANDFALS = {
         "h": 2000,
         "alt": "Pausebord"
       },
-      "tekst": [],
+      "tekst": [
+        "En 500kg tung marmorplate plassert på en solid granittbase. Platen ligger intensjonelt på skrå med tanke på to ansatte, en kort og en lang, som har jobbet her i over 30 år. Rundt bordet ligger skiferplater. Et lunsjsted som gir mening 100 år fra nå. Eller kanskje ikke."
+      ],
       "fakta": {
         "Kunde": "Sa steinskulptur"
       },
       "bilder": [
         {
           "src": "img/pausebord-sa-steinskulptur/02.jpg",
-          "w": 1270,
-          "h": 1452,
+          "w": 1749,
+          "h": 2000,
           "alt": "",
           "format": "halv"
         },
         {
           "src": "img/pausebord-sa-steinskulptur/03.jpg",
-          "w": 1507,
+          "w": 1749,
           "h": 2000,
           "alt": "",
           "format": "halv"
@@ -190,15 +200,17 @@ window.RANDFALS = {
         },
         {
           "src": "img/pausebord-sa-steinskulptur/05.jpg",
-          "w": 1749,
+          "w": 1507,
           "h": 2000,
           "alt": "",
           "format": "halv"
         },
         {
-          "src": "img/pausebord-sa-steinskulptur/06.jpg",
-          "w": 1749,
-          "h": 2000,
+          "type": "video",
+          "src": "img/pausebord-sa-steinskulptur/06.mp4",
+          "plakat": "img/pausebord-sa-steinskulptur/06-plakat.jpg",
+          "w": 720,
+          "h": 956,
           "alt": "",
           "format": "halv"
         },
@@ -228,11 +240,9 @@ window.RANDFALS = {
           "format": "halv"
         },
         {
-          "type": "video",
-          "src": "img/pausebord-sa-steinskulptur/10.mp4",
-          "plakat": "img/pausebord-sa-steinskulptur/10-plakat.jpg",
-          "w": 720,
-          "h": 956,
+          "src": "img/pausebord-sa-steinskulptur/10.jpg",
+          "w": 1270,
+          "h": 1452,
           "alt": "",
           "format": "smal"
         }
@@ -252,7 +262,12 @@ window.RANDFALS = {
         "h": 1333,
         "alt": "Portland"
       },
-      "tekst": [],
+      "tekst": [
+        "Portlandsstein, granitt, bronse",
+        "2026",
+        "Etter et år med steinarbeid og bronsestøping har vi samlet opp materialer av ulik kvalitet, form og opprinnelse.",
+        "Bordplaten er laget av portlandsstein, mens understellet består av bearbeidet granitt. Et løp fra støpingen av en bronseskulptur er brukt til å holde steinene sammen."
+      ],
       "fakta": {},
       "bilder": [
         {
@@ -313,7 +328,9 @@ window.RANDFALS = {
         "h": 1393,
         "alt": "Utstilling"
       },
-      "tekst": [],
+      "tekst": [
+        "Gravsteinsutstilling for SA Steinskulptur. Over 20 tonn med stein flyttet for hånd for å omorganisere og kuratere den nye utstillingen."
+      ],
       "fakta": {
         "Kunde": "Sa steinskulptur"
       },
@@ -383,7 +400,9 @@ window.RANDFALS = {
         "h": 1333,
         "alt": "Vannstasjon"
       },
-      "tekst": [],
+      "tekst": [
+        "I mangel på en passende vask til Steinskulptur så vi oss nødt til å hogge en i stein – i god Reodor Felgen-stil. En steinsylinder med uthogde felt for kabel."
+      ],
       "fakta": {
         "Kunde": "Sa steinskulptur"
       },
@@ -391,14 +410,14 @@ window.RANDFALS = {
         {
           "src": "img/vannstasjon-sa-steinskulptur/02.jpg",
           "w": 2000,
-          "h": 1339,
+          "h": 1333,
           "alt": "",
           "format": "full"
         },
         {
           "src": "img/vannstasjon-sa-steinskulptur/03.jpg",
           "w": 2000,
-          "h": 1339,
+          "h": 1333,
           "alt": "",
           "format": "halv"
         },
@@ -412,7 +431,7 @@ window.RANDFALS = {
         {
           "src": "img/vannstasjon-sa-steinskulptur/05.jpg",
           "w": 2000,
-          "h": 1333,
+          "h": 1339,
           "alt": "",
           "format": "full"
         },
@@ -424,9 +443,11 @@ window.RANDFALS = {
           "format": "halv"
         },
         {
-          "src": "img/vannstasjon-sa-steinskulptur/07.jpg",
-          "w": 2000,
-          "h": 1333,
+          "type": "video",
+          "src": "img/vannstasjon-sa-steinskulptur/07.mp4",
+          "plakat": "img/vannstasjon-sa-steinskulptur/07-plakat.jpg",
+          "w": 1072,
+          "h": 718,
           "alt": "",
           "format": "halv"
         },
@@ -458,11 +479,9 @@ window.RANDFALS = {
           "format": "halv"
         },
         {
-          "type": "video",
-          "src": "img/vannstasjon-sa-steinskulptur/11.mp4",
-          "plakat": "img/vannstasjon-sa-steinskulptur/11-plakat.jpg",
-          "w": 1072,
-          "h": 718,
+          "src": "img/vannstasjon-sa-steinskulptur/11.jpg",
+          "w": 2000,
+          "h": 1339,
           "alt": "",
           "format": "halv"
         }
@@ -482,7 +501,9 @@ window.RANDFALS = {
         "h": 1333,
         "alt": "Verksted"
       },
-      "tekst": [],
+      "tekst": [
+        "Verktøytavle for bearbeiding av Stein og treverk"
+      ],
       "fakta": {
         "Kunde": "Sa steinskulptur"
       },

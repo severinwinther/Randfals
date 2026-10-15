@@ -112,8 +112,8 @@ body[data-side="hjem"] #app { min-height: 100svh; display: flex; flex-direction:
 .hero img { width: 100%; }
 
 .p-tekst { display: grid; grid-template-columns: 1fr 2fr; gap: var(--pad); padding: 16vh var(--pad); }
-.p-tekst .avsnitt { display: grid; gap: 0.9em; max-width: 36em; }
-.p-tekst .avsnitt p { font: 800 clamp(19px, 1.9vw, 32px)/1.08 var(--sans); letter-spacing: -0.01em; }
+.p-tekst .avsnitt { display: grid; gap: 0.8em; max-width: 46em; }
+.p-tekst .avsnitt p { font: 800 clamp(16px, 1.4vw, 22px)/1.18 var(--sans); letter-spacing: -0.005em; }
 
 .galleri { display: grid; gap: var(--pad); padding: 0 var(--pad); }
 .galleri figure { margin: 0; }

@@ -76,7 +76,7 @@ def les_tekst(filer):
                 t = rå.decode(kod); break
             except UnicodeDecodeError:
                 continue
-        avsnitt += [re.sub(r"\s+", " ", a).strip() for a in re.split(r"\n\s*\n", t) if a.strip()]
+        avsnitt += [re.sub(r"\s+", " ", a).strip() for a in t.splitlines() if a.strip()]
     return avsnitt
 
 
@@ -95,6 +95,11 @@ def sett_format(medier):
         forrige = m["format"]; i += 1
 
 
+def naturlig(f):
+    """1, 2, ... 10 i stedet for 1, 10, 2"""
+    return [int(d) if d.isdigit() else d for d in re.split(r"(\d+)", f.name.lower())]
+
+
 def importer(kildemappe):
     gammel = DATA.read_text(encoding="utf-8")
     hode = gammel[: gammel.index("window.RANDFALS")]
@@ -103,38 +108,40 @@ def importer(kildemappe):
     prosjekter, hoppet = [], []
     for mappe in sorted(p for p in Path(kildemappe).iterdir() if p.is_dir()):
         info = tolk_navn(mappe.name)
-        filer = sorted((f for f in mappe.rglob("*") if f.is_file()), key=lambda f: f.name.lower())
-        bilder = [f for f in filer if f.suffix.lower() in BILDE]
-        videoer = [f for f in filer if f.suffix.lower() in VIDEO]
-        pdfer = [f for f in filer if f.suffix.lower() == ".pdf"]
+        filer = sorted((f for f in mappe.rglob("*") if f.is_file()), key=naturlig)
+        medietyper = BILDE | VIDEO | {".pdf"}
+        kilder = [f for f in filer if f.suffix.lower() in medietyper]
         tekst = les_tekst([f for f in filer if f.suffix.lower() == ".txt"])
-        if not (bilder or videoer or pdfer):
+        if not kilder:
             hoppet.append(mappe.name); continue
 
-        forside = [f for f in bilder if f.stem.lower().startswith("forside")]
-        bilder = forside + [f for f in bilder if f not in forside]
+        forside = [f for f in kilder if f.suffix.lower() in BILDE and f.stem.lower().startswith("forside")]
+        kilder = forside + [f for f in kilder if f not in forside]
         slug = slugify(f"{info['tittel']}-{info['undertittel']}" if info["kunde"] else info["tittel"])
         ut = IMG / slug
         shutil.rmtree(ut, ignore_errors=True); ut.mkdir(parents=True)
 
         sett, medier, n = set(), [], 0
         with tempfile.TemporaryDirectory() as tmp:
-            for pdf in pdfer:
-                subprocess.run(["pdftoppm", "-r", "150", "-jpeg", str(pdf), str(Path(tmp) / pdf.stem)], check=True)
-            pdfsider = sorted(Path(tmp).glob("*.jpg"))
-            for f in bilder + pdfsider:
+            for f in kilder:  # samme rekkefølge som i mappen (naturlig sortert)
                 h = hashlib.md5(f.read_bytes()).hexdigest()
                 if h in sett: continue
-                sett.add(h); n += 1
-                navn = f"{n:02d}.jpg"
-                w, hh = lagre_bilde(f, ut / navn)
-                medier.append({"src": f"img/{slug}/{navn}", "w": w, "h": hh, "alt": ""})
-        for f in videoer:
-            h = hashlib.md5(f.read_bytes()).hexdigest()
-            if h in sett: continue
-            sett.add(h); n += 1
-            w, hh = lagre_video(f, ut / f"{n:02d}.mp4", ut / f"{n:02d}-plakat.jpg")
-            medier.append({"type": "video", "src": f"img/{slug}/{n:02d}.mp4", "plakat": f"img/{slug}/{n:02d}-plakat.jpg", "w": w, "h": hh, "alt": ""})
+                sett.add(h)
+                ext = f.suffix.lower()
+                if ext in VIDEO:
+                    n += 1
+                    w, hh = lagre_video(f, ut / f"{n:02d}.mp4", ut / f"{n:02d}-plakat.jpg")
+                    medier.append({"type": "video", "src": f"img/{slug}/{n:02d}.mp4", "plakat": f"img/{slug}/{n:02d}-plakat.jpg", "w": w, "h": hh, "alt": ""})
+                    continue
+                sider = [f]
+                if ext == ".pdf":
+                    subprocess.run(["pdftoppm", "-r", "150", "-jpeg", str(f), str(Path(tmp) / f"{h}")], check=True)
+                    sider = sorted(Path(tmp).glob(f"{h}*.jpg"), key=naturlig)
+                for side in sider:
+                    n += 1
+                    navn = f"{n:02d}.jpg"
+                    w, hh = lagre_bilde(side, ut / navn)
+                    medier.append({"src": f"img/{slug}/{navn}", "w": w, "h": hh, "alt": ""})
 
         stille = [m for m in medier if m.get("type") != "video"]
         if forside:  # en fil som heter "forside" vinner alltid
