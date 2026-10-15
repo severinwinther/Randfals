@@ -18,10 +18,11 @@ window.RANDFALS = {
   "navn": "RANDFALS",
   "sted": "Oslo",
   "tidssone": "Europe/Oslo",
-  "ingress": "En kuratert samling av arbeider laget med intensjon, presisjon og ro. Fra enkeltobjekter til hele rom — hver detalj er tegnet for å vare lenger enn et øyeblikk.",
+  "ingress": "En kuratert samling av arbeider laget med intensjon, presisjon og ro. Fra enkeltobjekter til hele rom.",
   "om": {
     "tekst": "RANDFALS er et uavhengig studio for møbler, objekter og rom. Arbeidet bygger på klarhet og tilbakeholdenhet — med vekt på proporsjon, materiale og lys — og resulterer i ting som føles både tidløse og samtidige.",
     "tjenester": [
+      "Arkitektur",
       "Møbeldesign",
       "Spesialsnekkeri",
       "Objekter",
@@ -34,14 +35,10 @@ window.RANDFALS = {
         "url": "https://www.instagram.com/randfals.mm/"
       }
     ],
-    "epost": "post@randfals.no",
+    "epost": "randfals.info@gmail.com",
     "telefon": "",
-    "bilde": {
-      "src": "img/gjenbrukskjokken-sa-steinskulptur/01.jpg",
-      "w": 1209,
-      "h": 798,
-      "alt": "Gjenbrukskjøkken"
-    }
+    "bilde": null,
+    "logo": true
   },
   "prosjekter": [
     {
@@ -248,6 +245,87 @@ window.RANDFALS = {
         }
       ],
       "kilde": "2026_OSLO_PAUSEBORD_SA STEINSKULPTUR"
+    },
+    {
+      "slug": "masi",
+      "tittel": "Masi",
+      "undertittel": "Sidebord",
+      "kategori": "Sidebord",
+      "aar": 2026,
+      "sted": "Oslo",
+      "forside": {
+        "src": "img/masi/01.jpg",
+        "w": 1333,
+        "h": 2000,
+        "alt": "Masi"
+      },
+      "tekst": [
+        "Sidebord i polert tysk kalkstein og norsk masikvartsitt. Masi-steinen er kuttet og brutt av en større del, og platen og understellet er felt inn i hverandre."
+      ],
+      "fakta": {},
+      "bilder": [
+        {
+          "src": "img/masi/02.jpg",
+          "w": 1333,
+          "h": 2000,
+          "alt": "",
+          "format": "smal"
+        },
+        {
+          "src": "img/masi/03.jpg",
+          "w": 2000,
+          "h": 1333,
+          "alt": "",
+          "format": "full"
+        },
+        {
+          "src": "img/masi/04.jpg",
+          "w": 1500,
+          "h": 2000,
+          "alt": "",
+          "format": "halv"
+        },
+        {
+          "src": "img/masi/05.jpg",
+          "w": 1500,
+          "h": 2000,
+          "alt": "",
+          "format": "halv"
+        },
+        {
+          "type": "video",
+          "src": "img/masi/06.mp4",
+          "plakat": "img/masi/06-plakat.jpg",
+          "w": 1080,
+          "h": 1920,
+          "alt": "",
+          "format": "halv"
+        },
+        {
+          "src": "img/masi/07.jpg",
+          "w": 1333,
+          "h": 2000,
+          "alt": "",
+          "format": "halv"
+        },
+        {
+          "src": "img/masi/08.jpg",
+          "w": 1333,
+          "h": 2000,
+          "alt": "",
+          "format": "smal"
+        },
+        {
+          "type": "video",
+          "src": "img/masi/09.mp4",
+          "plakat": "img/masi/09-plakat.jpg",
+          "w": 1280,
+          "h": 720,
+          "alt": "",
+          "format": "smal"
+        }
+      ],
+      "kilde": "2026_OSLO_SIDEBORD-MASI"
     },
     {
       "slug": "portland",

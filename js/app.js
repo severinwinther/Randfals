@@ -290,7 +290,7 @@
           ${o.epost ? `<li><a href="mailto:${esc(o.epost)}">${esc(o.epost)}</a></li>` : ""}
           ${o.telefon ? `<li><a href="tel:${esc(o.telefon.replace(/\s/g, ""))}">${esc(o.telefon)}</a></li>` : ""}
         </ul></div>
-        ${o.bilde ? `<figure class="om-bilde vis-ved-scroll">${bilde(o.bilde)}</figure>` : ""}
+        ${o.logo ? `<div class="om-logo inn" style="--i:5" aria-hidden="true">${esc(D.navn)}<i></i></div>` : o.bilde ? `<figure class="om-bilde vis-ved-scroll">${bilde(o.bilde)}</figure>` : ""}
       </main>
       ${bunn()}`;
     felles();

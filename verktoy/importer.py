@@ -18,6 +18,11 @@ Skriver img/<slug>/ og js/data.js. Om-teksten, ingressen osv. i data.js beholdes
 import hashlib, json, re, shutil, subprocess, sys, tempfile, unicodedata
 from pathlib import Path
 from PIL import Image, ImageOps
+try:  # HEIC-bilder fra iPhone
+    from pillow_heif import register_heif_opener
+    register_heif_opener()
+except ImportError:
+    pass
 
 ROT = Path(__file__).resolve().parent.parent
 IMG = ROT / "img"

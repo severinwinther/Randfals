@@ -159,6 +159,8 @@ body[data-side="hjem"] #app { min-height: 100svh; display: flex; flex-direction:
 .om-blokk a { border-bottom: 2px solid currentColor; }
 .om-blokk a:hover { opacity: 0.6; }
 .om-bilde { width: min(18vw, 300px); margin-top: 9vh; }
+.om-logo { display: flex; width: max-content; align-items: flex-start; gap: 0.08em; margin-top: 9vh; font: 600 clamp(28px, 3vw, 48px)/1 var(--mono); letter-spacing: 0.02em; }
+.om-logo i { width: 0.22em; height: 0.22em; background: currentColor; margin-top: -0.04em; }
 
 /* ---------- Animasjon ---------- */
 .inn { animation: opp 0.9s var(--ease) both; animation-delay: calc(var(--i, 0) * 70ms); }
