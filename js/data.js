@@ -35,7 +35,7 @@ window.RANDFALS = {
         "url": "https://www.instagram.com/randfals.mm/"
       }
     ],
-    "epost": "randfals.info@gmail.com",
+    "epost": "post@randfals.com",
     "telefon": "",
     "bilde": null,
     "logo": true
