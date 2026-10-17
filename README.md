@@ -27,6 +27,35 @@ python3 verktoy/importer.py "<sti>/RANDFALS.COM/Prosjekter"
 - `.txt` blir prosjekttekst (tom linje = nytt avsnitt).
 - Om-teksten og ingressen i `data.js` røres ikke.
 
+## Instagram → utkast (automatisk)
+
+Hver morgen (ca. kl. 07) sjekker GitHub Instagram-kontoen for nye innlegg. Finner den noe, lager den et **utkast** (pull request) med prosjektene ferdig lagt inn. Ingenting publiseres før du trykker **Merge** på utkastet.
+
+**Navngi innlegget på Instagram.** Første linje i bildeteksten er mappenavnet, samme format som på skrivebordet:
+
+```
+2026_OSLO_PAUSEBORD_SA STEINSKULPTUR
+Resten av teksten blir prosjekttekst. Hashtags fjernes.
+```
+
+- Flere innlegg med samme første linje blir ett prosjekt.
+- Finnes prosjektet allerede på siden, legges bildene til sist i galleriet.
+- Innlegg uten et slikt navn hoppes over og listes i utkastet. Rett bildeteksten, så kommer de med neste gang.
+- Originalmappene (bilder + `tekst.txt`) kan lastes ned fra kjøringen under **Actions → Artifacts → prosjektmapper** og legges i `RANDFALS.COM/Prosjekter`.
+- Instagram-bilder er maks 1440 px. Ligger prosjektet også på skrivebordet, vinner skrivebordsversjonen ved neste import. Prosjekter som bare finnes på Instagram beholdes.
+- `verktoy/instagram.json`: `fra` = innlegg eldre enn denne datoen hentes ikke (sett tidligere for å hente historikk). `ignorer` = lenker til innlegg som aldri skal med.
+
+### Oppsett (én gang)
+
+1. **Instagram-kontoen** `randfals.mm` må være en profesjonell konto (Innstillinger → Kontotype → bytt til profesjonell; bedrift eller skaper).
+2. **Lag en Meta-app:** [developers.facebook.com](https://developers.facebook.com/apps) → Create app → bruksområde *Manage messaging & content on Instagram* → produktet **Instagram API with Instagram login**. Under *Generate access tokens*: legg til `randfals.mm` og trykk **Generate token**. Tillatelsen som trengs er `instagram_business_basic`. Kopier nøkkelen.
+3. **Legg nøkkelen i GitHub:** repoet → Settings → Secrets and variables → Actions → New repository secret → navn `INSTAGRAM_TOKEN`.
+4. **La GitHub lage utkast:** Settings → Actions → General → Workflow permissions → huk av **Allow GitHub Actions to create and approve pull requests** → Save.
+5. **Nøkkelen varer i 60 dager**, og jobben fornyer den hver dag. For at den fornyede nøkkelen skal lagres automatisk: lag en [fine-grained token](https://github.com/settings/personal-access-tokens/new) med tilgang til bare `randfals` og rettigheten *Secrets: Read and write*, og legg den inn som secret `GH_PAT`. Uten den må du lage ny Instagram-nøkkel (punkt 2–3) hver 60. dag.
+6. Test: Actions → **Instagram → utkast** → Run workflow.
+
+Kjøre lokalt: `INSTAGRAM_TOKEN=... python3 verktoy/instagram.py --mapper /tmp/mapper`
+
 ## Oppdatere innhold manuelt
 
 **All tekst og alle prosjekter ligger i `js/data.js`.** Du trenger ikke røre noe annet.

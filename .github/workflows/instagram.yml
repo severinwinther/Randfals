@@ -1,0 +1,78 @@
+# RANDFALS — henter nye Instagram-innlegg hver morgen og lager et utkast (pull request).
+# Ingenting publiseres før du fletter inn (merger) utkastet.
+# Oppsett: se «Instagram → utkast» i README.md.
+name: Instagram → utkast
+
+on:
+  schedule:
+    - cron: "17 5 * * *"   # hver dag ca. kl. 07 norsk tid
+  workflow_dispatch:       # «Run workflow» under Actions for å kjøre nå
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: instagram
+  cancel-in-progress: false
+
+jobs:
+  hent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Installer verktøy
+        run: |
+          pip install pillow
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg poppler-utils
+
+      - name: Forny Instagram-nøkkelen
+        # Nøkkelen varer i 60 dager. Med secret GH_PAT lagres den fornyede nøkkelen automatisk.
+        continue-on-error: true
+        env:
+          INSTAGRAM_TOKEN: ${{ secrets.INSTAGRAM_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          svar=$(curl -sf "https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=${INSTAGRAM_TOKEN}") || { echo "::warning::Kunne ikke fornye Instagram-nøkkelen."; exit 0; }
+          ny=$(echo "$svar" | jq -r .access_token)
+          dager=$(( $(echo "$svar" | jq -r .expires_in) / 86400 ))
+          echo "::add-mask::$ny"
+          if [ -n "$GH_TOKEN" ] && [ "$ny" != "$INSTAGRAM_TOKEN" ]; then
+            gh secret set INSTAGRAM_TOKEN --body "$ny" --repo "$GITHUB_REPOSITORY" && echo "Ny nøkkel lagret, gyldig i $dager dager."
+          else
+            echo "Nøkkelen er gyldig i $dager dager."
+          fi
+          echo "INSTAGRAM_TOKEN_NY=$ny" >> "$GITHUB_ENV"
+
+      - name: Hent nye innlegg
+        id: hent
+        env:
+          INSTAGRAM_TOKEN: ${{ env.INSTAGRAM_TOKEN_NY || secrets.INSTAGRAM_TOKEN }}
+        run: python3 verktoy/instagram.py --mapper "$RUNNER_TEMP/prosjektmapper" --rapport "$RUNNER_TEMP/utkast.md"
+
+      - name: Lagre prosjektmappene
+        if: steps.hent.outputs.endret == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: prosjektmapper
+          path: ${{ runner.temp }}/prosjektmapper
+          retention-days: 30
+
+      - name: Lag eller oppdater utkast
+        if: steps.hent.outputs.endret == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: instagram/utkast
+          delete-branch: true
+          add-paths: |
+            img
+            js/data.js
+          commit-message: "Instagram: nye prosjekter"
+          title: "Instagram: nye prosjekter (utkast)"
+          body-path: ${{ runner.temp }}/utkast.md
+          labels: instagram
