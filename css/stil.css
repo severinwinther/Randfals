@@ -99,6 +99,9 @@ body[data-side="hjem"] #app { min-height: 100svh; display: flex; flex-direction:
   padding-top: 0.06em;
 }
 .ordmerke span { display: inline-block; }
+/* animert ordmerke i Randfals Modul (js/ordmerke.js) — fyller bredden som før */
+.ordmerke.ordmerke-modul { font-size: 0; line-height: 0; padding-top: 0; }
+.ordmerke-modul svg { display: block; width: 100%; height: auto; margin-block: -2.56%; }
 .ingress { max-width: 74ch; margin: 18px auto 0; text-align: center; padding: 0 var(--pad); }
 
 .bunn { display: flex; justify-content: space-between; gap: 1em; padding: var(--pad); padding-top: 28px; }

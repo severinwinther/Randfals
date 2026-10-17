@@ -1,0 +1,163 @@
+<title>Randfals Modul</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..500&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+@font-face{font-family:"Randfals Modul";src:url(data:font/woff2;base64,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) format("woff2");font-display:block}
+/* Én fast verden: kalk og kull, som profilen. Plansjeoppsett med tegningsfelt. */
+:root{
+  --kalk:#F4F3EF; --kull:#0B0B0B; --betong:#B9B6AE; --skifer:#6B6A66; --linje:#0B0B0B;
+  --modul:"Randfals Modul", "Archivo", Arial, sans-serif;
+  --sans:"Archivo", Arial, Helvetica, sans-serif;
+  --mono:"IBM Plex Mono", "Courier New", monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--kalk);color:var(--kull);font-family:var(--sans);font-size:15px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 48px}
+.page{max-width:1080px;margin:0 auto}
+.m{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+.mut{color:var(--skifer)}
+header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;padding-block:28px 14px;flex-wrap:wrap}
+.fals{height:12px;position:relative;margin-bottom:56px}
+.fals::before{content:"";position:absolute;left:0;top:0;width:78%;height:12px;border-top:1px solid var(--linje);border-right:1px solid var(--linje)}
+.fals::after{content:"";position:absolute;left:78%;right:0;bottom:0;border-bottom:1px solid var(--linje)}
+.hero{font-family:var(--modul);font-size:clamp(56px,13vw,150px);line-height:1.1;letter-spacing:.04em;margin:0 0 20px;word-break:break-word}
+.lede{max-width:60ch;margin:0 0 72px;font-size:17px;text-wrap:pretty}
+section{margin-bottom:72px}
+h2{font-family:var(--sans);font-stretch:112%;font-weight:500;font-size:13px;letter-spacing:.2em;text-transform:uppercase;margin:0 0 16px;display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--linje);padding-bottom:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));border-left:1px solid var(--linje);border-top:1px solid var(--linje)}
+.cell{border-right:1px solid var(--linje);border-bottom:1px solid var(--linje);aspect-ratio:1;max-width:100%;display:flex;flex-direction:column;justify-content:space-between;padding:6px 8px;background:var(--kalk);cursor:default;transition:background .15s,color .15s}
+.cell b{font-family:var(--modul);font-weight:400;font-size:38px;line-height:1;align-self:center;margin-top:10px}
+.cell span{font-family:var(--mono);font-size:10px;letter-spacing:.04em;color:var(--skifer)}
+.cell:hover,.cell:focus-visible{background:var(--kull);color:var(--kalk);outline:none}
+.cell:hover span,.cell:focus-visible span{color:var(--betong)}
+.tester{display:flex;flex-direction:column;gap:14px}
+.controls{display:flex;gap:20px;flex-wrap:wrap;align-items:center}
+.controls label{display:flex;gap:10px;align-items:center}
+input[type=text]{width:100%;font-family:var(--mono);font-size:13px;padding:10px 12px;border:1px solid var(--linje);background:transparent;color:var(--kull);border-radius:0}
+input[type=text]:focus-visible{outline:2px solid var(--kull);outline-offset:2px}
+input[type=range]{accent-color:var(--kull);width:160px}
+#out{font-family:var(--modul);line-height:1.25;overflow-wrap:break-word;min-height:1.3em;font-size:72px}
+.rules{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:40px;align-items:start}
+.rules svg{width:100%;max-width:260px;height:auto}
+dl{margin:0;display:grid;grid-template-columns:max-content minmax(0,1fr);border-top:1px solid var(--linje)}
+dt,dd{margin:0;padding:10px 0;border-bottom:1px solid var(--betong)}
+dt{padding-right:24px}
+.sizes{display:flex;flex-direction:column;gap:6px}
+.sizes div{display:grid;grid-template-columns:56px minmax(0,1fr);align-items:baseline;gap:12px;border-bottom:1px solid var(--betong);padding-block:6px;overflow:hidden}
+.sizes p{margin:0;font-family:var(--modul);white-space:nowrap;overflow:hidden;text-overflow:clip}
+.pair{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--linje);border:1px solid var(--linje)}
+.pair > div{background:var(--kalk);padding:18px;min-width:0}
+.pair .x{font-size:30px;line-height:1.2;margin:10px 0}
+.k{background:var(--kull)!important;color:var(--kalk)}
+.k .mut{color:var(--betong)}
+footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--linje);padding-top:12px}
+@media (max-width:700px){.rules{grid-template-columns:1fr}.pair{grid-template-columns:1fr}#out{font-size:44px}}
+@media (prefers-reduced-motion:reduce){.cell{transition:none}}
+</style>
+
+<div class="page">
+<header>
+  <span class="m">RANDFALS — Skrift</span>
+  <span class="m mut">Versjon 1.000 — 2026</span>
+</header>
+<div class="fals" aria-hidden="true"></div>
+
+<h1 class="hero">RANDFALS MODUL</h1>
+<p class="lede">En versalskrift tegnet på samme rutenett som R-en i logoen. Hver bokstav er 4 × 5 moduler, strekene er én modul tykke, og falsen, ett felt tatt ut av øvre høyre hjørne, går igjen i A, B, D, M, N, P og R.</p>
+
+<section aria-labelledby="h-tegn">
+  <h2 id="h-tegn"><span>Tegnsett</span><span class="m mut" id="count"></span></h2>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section aria-labelledby="h-test">
+  <h2 id="h-test"><span>Prøv skriften</span><span class="m mut">Små bokstaver blir versaler</span></h2>
+  <div class="tester">
+    <input type="text" id="txt" value="Hus ved fjorden — 2025_Hardanger_Fritidsbolig" aria-label="Prøvetekst">
+    <div class="controls">
+      <label class="m" for="size">Størrelse <input type="range" id="size" min="16" max="160" step="1" value="72"> <span id="sizeOut">72 px</span></label>
+      <label class="m" for="track">Sperring <input type="range" id="track" min="0" max="40" step="1" value="4"> <span id="trackOut">0,04 em</span></label>
+    </div>
+    <div id="out" aria-live="polite"></div>
+  </div>
+</section>
+
+<section aria-labelledby="h-kon">
+  <h2 id="h-kon"><span>Konstruksjon</span><span class="m mut">1 modul = 140 enheter</span></h2>
+  <div class="rules">
+    <svg viewBox="-8 -8 64 76" role="img" aria-label="R-en tegnet på rutenett med falsen markert">
+      <g stroke="#B9B6AE" stroke-width="0.35"><path d="M0 0V60M12 0V60M24 0V60M36 0V60M48 0V60M0 0H48M0 12H48M0 24H48M0 36H48M0 48H48M0 60H48"/></g>
+      <path fill="#0B0B0B" fill-rule="evenodd" d="M0 0H36V12H48V36H36L48 60H36L24 36H12V60H0Z M12 12H36V24H12Z"/>
+      <rect x="36" y="0" width="12" height="12" fill="none" stroke="#0B0B0B" stroke-width="0.6" stroke-dasharray="1.5 1.5"/>
+    </svg>
+    <dl class="m">
+      <dt class="mut">Rutenett</dt><dd>4 × 5 moduler. M, W og Æ er 5–6 moduler brede, I er én.</dd>
+      <dt class="mut">Strek</dt><dd>Én modul, likt overalt.</dd>
+      <dt class="mut">Falsen</dt><dd>1 × 1 modul ut av øvre høyre hjørne. A har den speilvendt.</dd>
+      <dt class="mut">Skrått</dt><dd>Bare der bokstaven krever det: R, Q, K, X, Y, Z og 7.</dd>
+      <dt class="mut">Avstand</dt><dd>Én modul mellom bokstavene. Sperr heller ut enn inn.</dd>
+      <dt class="mut">Bruk</dt><dd>Titler, skilt, merking og logo. Ikke brødtekst.</dd>
+    </dl>
+  </div>
+</section>
+
+<section aria-labelledby="h-str">
+  <h2 id="h-str"><span>Størrelser</span><span class="m mut">Minste anbefalte: 14 px / 8 pt</span></h2>
+  <div class="sizes" id="sizes"></div>
+</section>
+
+<section aria-labelledby="h-par">
+  <h2 id="h-par"><span>Familien</span><span class="m mut">Tre roller</span></h2>
+  <div class="pair">
+    <div><p class="m mut">Modul — titler og merke</p><p class="x" style="font-family:var(--modul)">FJORDHUS</p></div>
+    <div><p class="m mut">Archivo — brødtekst</p><p class="x" style="font-family:var(--sans);font-size:20px;line-height:1.5">Et lite hus i laftet furu, plassert i kanten av tomten.</p></div>
+    <div class="k"><p class="m mut">Plex Mono — metadata</p><p class="x m" style="font-size:13px;line-height:1.8">2024 — Hardanger<br>Fritidsbolig — Privat</p></div>
+  </div>
+</section>
+
+<footer>
+  <span class="m">RandfalsModul-Regular — OTF, TTF, WOFF, WOFF2</span>
+  <span class="m mut">post@randfals.com</span>
+</footer>
+</div>
+
+<script>
+const chars = [
+  ["A–Z","ABCDEFGHIJKLMNOPQRSTUVWXYZ"],
+  ["Nordisk","ÆØÅÄÖÜÉ"],
+  ["Tall","0123456789"],
+  ["Tegn",".,:;!?'\"-–—_/·+×=[]«»→#%@*"]
+];
+const grid = document.getElementById("grid");
+let n = 0;
+for (const [, set] of chars) for (const ch of set) {
+  const d = document.createElement("div");
+  d.className = "cell"; d.tabIndex = 0;
+  const cp = ch.codePointAt(0).toString(16).toUpperCase().padStart(4, "0");
+  d.setAttribute("aria-label", ch + " U+" + cp);
+  d.innerHTML = "<span>U+" + cp + "</span><b></b><span></span>";
+  d.querySelector("b").textContent = ch;
+  grid.appendChild(d); n++;
+}
+document.getElementById("count").textContent = n + " tegn";
+
+const sizes = document.getElementById("sizes");
+for (const s of [96, 56, 32, 20, 14]) {
+  const r = document.createElement("div");
+  r.innerHTML = '<span class="m mut">' + s + ' px</span><p style="font-size:' + s + 'px;letter-spacing:' + (s < 24 ? .1 : .04) + 'em">' + (s > 60 ? 'RANDFALS' : 'RANDFALS ARKITEKTER 2026') + '</p>';
+  sizes.appendChild(r);
+}
+
+const txt = document.getElementById("txt"), out = document.getElementById("out");
+const size = document.getElementById("size"), track = document.getElementById("track");
+function render() {
+  out.textContent = txt.value.toUpperCase() || " ";
+  out.style.fontSize = size.value + "px";
+  out.style.letterSpacing = (track.value / 100) + "em";
+  document.getElementById("sizeOut").textContent = size.value + " px";
+  document.getElementById("trackOut").textContent = (track.value / 100).toFixed(2).replace(".", ",") + " em";
+}
+[txt, size, track].forEach(el => el.addEventListener("input", render));
+render();
+</script>

@@ -67,6 +67,12 @@ Kjøre lokalt: `INSTAGRAM_TOKEN=... python3 verktoy/instagram.py --mapper /tmp/m
 
 > Prosjektene er ekte (importert). Ingressen, om-teksten og e-postadressen er fortsatt plassholdere.
 
+## Grafisk profil
+
+Logo, egen font (Randfals Modul), e-postmaler, visittkort, mønstre og animasjon ligger i `profil/` — se `profil/README.md`. Mappen er ikke lenket fra siden.
+
+Det eneste som er aktivt, er det animerte ordmerket på forsiden (`js/ordmerke.js`): ruter dukker opp på tilfeldige steder til RANDFALS står. Det spilles én gang per besøk, og vises ferdig for dem som har slått av animasjoner.
+
 ## Design-justeringer (i `css/stil.css`, øverst)
 
 - `--kort` — bredden på kortene i stripen
