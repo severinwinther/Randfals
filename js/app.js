@@ -90,11 +90,12 @@
         <section class="stripe${grov ? " native" : ""}" aria-label="Prosjekter">
           <div class="spor">${sett(false)}</div>
         </section>
-        <div class="ordmerke-boks"><h1 class="ordmerke inn" style="--i:2"><span>${esc(D.navn)}</span></h1></div>
+        <div class="ordmerke-boks"><h1 class="ordmerke ordmerke-modul" aria-label="${esc(D.navn)}"></h1></div>
         <p class="ingress inn" style="--i:4">${esc(D.ingress)}</p>
         ${bunn()}
       </main>`;
     felles();
+    if (window.RANDFALS_ordmerke) window.RANDFALS_ordmerke($(".ordmerke"));
     tilpassOrdmerke();
     $$(".kort").forEach((k, i) => (k.style.setProperty("--i", i), k.classList.add("inn")));
     $(".spor").addEventListener("click", (e) => {
