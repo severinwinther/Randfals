@@ -32,7 +32,7 @@ body{{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
 .forside .r{{position:absolute;left:8mm;bottom:8mm;height:22mm}}
 .forside .m{{position:absolute;right:8mm;top:8mm;font-family:'IBM Plex Mono','Courier New',monospace;font-size:5.5pt;letter-spacing:.08em;color:#B9B6AE;text-transform:uppercase}}
 .bakside{{background:#F4F3EF;color:#0B0B0B}}
-.bakside .ord{{position:absolute;left:8mm;top:7.2mm;height:4.4mm}}
+.bakside .ord{{position:absolute;left:8mm;top:7.4mm;height:4.1mm}}
 .fals{{position:absolute;left:8mm;right:8mm;top:14.5mm;height:1.6mm}}
 .fals i{{position:absolute;left:0;top:0;width:78%;height:100%;border-top:.25mm solid #0B0B0B;border-right:.25mm solid #0B0B0B}}
 .fals b{{position:absolute;left:78%;right:0;bottom:0;border-bottom:.25mm solid #0B0B0B}}

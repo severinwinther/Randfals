@@ -66,7 +66,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .nav > :nth-child(2), .nav > :nth-child(3) { justify-self: center; }
 .nav-h { justify-self: end; display: flex; align-items: center; gap: 12px; }
 .logo { display: inline-flex; align-items: flex-start; gap: 2px; font-weight: 600; letter-spacing: 0.02em; }
-.logo i { width: 6px; height: 6px; background: currentColor; margin-top: -1px; }
+.logo i { width: 4px; height: 4px; background: currentColor; }
 .tema { display: inline-flex; width: 22px; height: 11px; border: 1px solid currentColor; padding: 1px; }
 .tema span { width: 50%; height: 100%; background: currentColor; transition: transform 0.35s var(--ease); }
 .tema[aria-pressed="true"] span { transform: translateX(100%); }
