@@ -1,13 +1,13 @@
 # RANDFALS — grafisk profil
 
-Alt her ligger klart til bruk, men er ikke lenket fra nettsiden. Aktivt på siden er tekstlogoen i menyen, faviconet (R) og lastesiden ved nytt besøk (`js/laster.js`).
+Alt her ligger klart til bruk, men er ikke lenket fra nettsiden. Aktivt på siden er tekstlogoen i menyen, R-en som favicon og nederst på Om-siden, og lastesiden ved nytt besøk (`js/laster.js`).
 
 ## Logosystemet
 
 | Del | Hva | Brukes til |
 |---|---|---|
 | **Tekstlogo** | RANDFALS i IBM Plex Mono 600 etterfulgt av en firkant (`randfals-tekstlogo-*.svg`) | Meny, e-post, signatur, visittkort, alt som skal leses |
-| **Symbollogo** | R-en på 4 × 5-rutenettet med falsen tatt ut av hjørnet (`randfals-R-*.svg`) | Favicon, profilbilde, forsiden av visittkortet, stempel |
+| **Symbollogo** | R-en på 4 × 5-rutenettet med falsen tatt ut av hjørnet (`randfals-R-*.svg`) | Favicon, Om-siden, profilbilde, forsiden av visittkortet, stempel |
 | **Ordmerke** | RANDFALS i Randfals Modul (`randfals-ordmerke-*.svg`) | Bare lasteside og animasjon |
 
 Firkanten etter RANDFALS i tekstlogoen er den manglende biten i R-en: feltet som er freset ut av hjørnet. Tekstlogoen og symbollogoen hører sammen som to deler av samme fals.
