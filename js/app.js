@@ -10,8 +10,6 @@
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const lenke = (p) => `prosjekt.html?p=${encodeURIComponent(p.slug)}`;
   const nr = (i) => String(i + 1).padStart(2, "0");
-  // ordmerket i Randfals Modul (profil/logo/randfals-ordmerke-kull.svg)
-  const ORDMERKE = `<svg viewBox="0 0 5460 700" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 700V0H420V140H560V420H420L560 700H420L280 420H140V700ZM140 280H420V140H140ZM700 700V140H840V0H1260V700H1120V420H840V700ZM840 280H1120V140H840ZM1400 700V0H1820V140H1960V700H1820V140H1540V700ZM2100 700V0H2520V140H2660V700ZM2240 560H2520V140H2240ZM2800 700V0H3360V140H2940V280H3220V420H2940V700ZM3500 700V140H3640V0H4060V700H3920V420H3640V700ZM3640 280H3920V140H3640ZM4200 700V0H4340V560H4760V700ZM4900 700V560H5320V420H4900V0H5460V140H5040V280H5460V700Z"/></svg>`;
 
   const bilde = (b, { lat = true, alt } = {}) =>
     b ? `<img src="${esc(b.src)}" alt="${esc(alt ?? b.alt ?? "")}"${b.w ? ` width="${b.w}" height="${b.h}"` : ""}${lat ? ' loading="lazy"' : ""} decoding="async" draggable="false">` : "";
@@ -19,7 +17,7 @@
   /* ---------- felles: meny, bunn, tema, klokke ---------- */
   const nav = () => `
     <header class="nav">
-      <a href="./" class="logo" aria-label="${esc(D.navn)} — forside">${ORDMERKE}</a>
+      <a href="./" class="logo" aria-label="${esc(D.navn)} — forside">${esc(D.navn)}<i></i></a>
       <a href="liste.html" class="strek"${side === "liste" ? ' aria-current="page"' : ""}>Index</a>
       <a href="om.html" class="strek"${side === "om" ? ' aria-current="page"' : ""}>Om</a>
       <div class="nav-h">
@@ -92,12 +90,11 @@
         <section class="stripe${grov ? " native" : ""}" aria-label="Prosjekter">
           <div class="spor">${sett(false)}</div>
         </section>
-        <div class="ordmerke-boks"><h1 class="ordmerke ordmerke-modul" aria-label="${esc(D.navn)}"></h1></div>
+        <div class="ordmerke-boks"><h1 class="ordmerke inn" style="--i:2"><span>${esc(D.navn)}</span></h1></div>
         <p class="ingress inn" style="--i:4">${esc(D.ingress)}</p>
         ${bunn()}
       </main>`;
     felles();
-    if (window.RANDFALS_ordmerke) window.RANDFALS_ordmerke($(".ordmerke"));
     tilpassOrdmerke();
     $$(".kort").forEach((k, i) => (k.style.setProperty("--i", i), k.classList.add("inn")));
     $(".spor").addEventListener("click", (e) => {
@@ -293,7 +290,7 @@
           ${o.epost ? `<li><a href="mailto:${esc(o.epost)}">${esc(o.epost)}</a></li>` : ""}
           ${o.telefon ? `<li><a href="tel:${esc(o.telefon.replace(/\s/g, ""))}">${esc(o.telefon)}</a></li>` : ""}
         </ul></div>
-        ${o.logo ? `<div class="om-logo inn" style="--i:5" aria-hidden="true">${ORDMERKE}</div>` : o.bilde ? `<figure class="om-bilde vis-ved-scroll">${bilde(o.bilde)}</figure>` : ""}
+        ${o.logo ? `<div class="om-logo inn" style="--i:5" aria-hidden="true">${esc(D.navn)}<i></i></div>` : o.bilde ? `<figure class="om-bilde vis-ved-scroll">${bilde(o.bilde)}</figure>` : ""}
       </main>
       ${bunn()}`;
     felles();

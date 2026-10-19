@@ -1,17 +1,27 @@
 # RANDFALS — grafisk profil
 
-Alt her ligger klart til bruk, men er ikke lenket fra nettsiden. Det eneste som er aktivt på siden, er det animerte ordmerket på forsiden (`js/ordmerke.js`).
+Alt her ligger klart til bruk, men er ikke lenket fra nettsiden. Aktivt på siden er tekstlogoen i menyen, faviconet (R) og lastesiden ved nytt besøk (`js/laster.js`).
+
+## Logosystemet
+
+| Del | Hva | Brukes til |
+|---|---|---|
+| **Tekstlogo** | RANDFALS i IBM Plex Mono 600 etterfulgt av en firkant (`randfals-tekstlogo-*.svg`) | Meny, e-post, signatur, visittkort, alt som skal leses |
+| **Symbollogo** | R-en på 4 × 5-rutenettet med falsen tatt ut av hjørnet (`randfals-R-*.svg`) | Favicon, profilbilde, forsiden av visittkortet, stempel |
+| **Ordmerke** | RANDFALS i Randfals Modul (`randfals-ordmerke-*.svg`) | Bare lasteside og animasjon |
+
+Firkanten etter RANDFALS i tekstlogoen er den manglende biten i R-en: feltet som er freset ut av hjørnet. Tekstlogoen og symbollogoen hører sammen som to deler av samme fals.
 
 ## Innhold
 
 | Mappe | Hva |
 |---|---|
 | `font/` | **Randfals Modul** — egen versalskrift på 4 × 5-rutenettet. OTF/TTF til installering, WOFF/WOFF2 til nett. `partner/` har Archivo og IBM Plex Mono (brukt i visittkortet). |
-| `logo/` | R-merket og ordmerket som SVG (kull og kalk), og PNG: merke 1024 px, profilbilde 1080 px, ordmerke 2400 px. |
+| `logo/` | Tekstlogo, R-symbol og Modul-ordmerke som SVG (kull og kalk), og PNG: tekstlogo 2400 px, R 1024 px, profilbilde 1080 px, ordmerke 2400 px. |
 | `epost/` | E-postmal, signatur og kort hilsen. Bildene i `epost/bilder/` hentes fra `https://randfals.com/profil/epost/bilder/`. Felter i [hakeparentes] byttes ut. |
 | `visittkort/` | Trykkfil 85 × 55 mm med 3 mm utfallende (`randfals-visittkort-trykk.pdf`) og forhåndsvisning. |
 | `monster/` | Tre sømløse mønstre (falsfelt, trapp, R-felt) i to fargeveier, SVG-rapport + PNG. |
-| `animasjon/` | Ordmerket bygget av ruter på tilfeldige steder. HTML (spilles én gang) og MP4 1080 × 1080 til Instagram. |
+| `animasjon/` | Ordmerket bygget av ruter på tilfeldige steder. Samme animasjon som lastesiden. HTML (spilles én gang) og MP4 1080 × 1080 til Instagram. |
 | `fontprove/` | Fontprøve med alle tegn og prøvefelt. Åpnes på `randfals.com/profil/fontprove/`. |
 | `kilde/` | Skriptene som lager alt over. |
 

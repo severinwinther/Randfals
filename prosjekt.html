@@ -10,13 +10,15 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preload" href="fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/stil.css?v=3">
+<link rel="stylesheet" href="css/stil.css?v=4">
 <script>try{var t=localStorage.getItem("randfals-tema");if(t)document.documentElement.dataset.tema=t}catch(e){}</script>
+<script>try{if(!sessionStorage.getItem("randfals-besok"))document.documentElement.classList.add("laster")}catch(e){}</script>
 </head>
 <body data-side="prosjekt">
+<script src="js/laster.js?v=4"></script>
 <div id="app"></div>
 <noscript><p style="padding:20px">RANDFALS — slå på JavaScript for å se siden.</p></noscript>
-<script src="js/data.js?v=3"></script>
-<script src="js/app.js?v=3"></script>
+<script src="js/data.js?v=4"></script>
+<script src="js/app.js?v=4"></script>
 </body>
 </html>
