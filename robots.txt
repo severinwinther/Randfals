@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /profil/
+Disallow: /verktoy/
+
+Sitemap: https://randfals.com/sitemap.xml

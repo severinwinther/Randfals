@@ -1,6 +1,6 @@
 # RANDFALS — nettside
 
-Statisk nettside (HTML/CSS/JS, ingen byggesteg) laget for **GitHub Pages**.
+Statisk nettside (HTML/CSS/JS) laget for **GitHub Pages**. Sidene bygges ferdig for søkemotorer av `verktoy/seo.py` (skjer automatisk, se «SEO» under).
 Sort/hvitt, STORE BOKSTAVER, horisontal prosjektstripe på forsiden og vertikal prosjektside ved klikk.
 
 ## Sider
@@ -8,7 +8,7 @@ Sort/hvitt, STORE BOKSTAVER, horisontal prosjektstripe på forsiden og vertikal 
 | Fil | Innhold |
 |---|---|
 | `index.html` | Forside: uendelig horisontal stripe med prosjekter øverst, stort RANDFALS-ordmerke, ingress, klokke |
-| `prosjekt.html?p=<slug>` | Ett prosjekt: tittel, toppbilde, tekst, bildegalleri, fakta, «neste prosjekt» |
+| `prosjekt/<slug>/` | Ett prosjekt: tittel, toppbilde, tekst, bildegalleri, fakta, «neste prosjekt» (gamle `prosjekt.html?p=<slug>`-lenker sendes videre hit) |
 | `liste.html` | Index: alle prosjekter i liste, med bilde som følger musepekeren |
 | `om.html` | Om, tjenester, lenker og kontakt |
 | `404.html` | Feilside |
@@ -66,6 +66,22 @@ Kjøre lokalt: `INSTAGRAM_TOKEN=... python3 verktoy/instagram.py --mapper /tmp/m
 4. Rekkefølgen i `data.js` er rekkefølgen på siden.
 
 > Prosjektene er ekte (importert). Ingressen, om-teksten og e-postadressen er fortsatt plassholdere.
+
+## SEO (søkemotorer)
+
+`verktoy/seo.py` leser `js/data.js` og skriver ferdige HTML-sider, slik at Google ser tekst og bilder uten å kjøre JavaScript:
+
+- én ekte side per prosjekt (`prosjekt/<slug>/index.html`) med egen tittel, beskrivelse og delingsbilde
+- `index.html`, `liste.html`, `om.html`, `404.html`, `prosjekt.html`
+- strukturerte data (JSON-LD: organisasjon, prosjekter, brødsmuler), Open Graph for deling på sosiale medier
+- `sitemap.xml` (med bilder) og `robots.txt`
+
+Den kjøres automatisk av `importer.py`, Instagram-utkastene og GitHub (Actions → **SEO**) når `js/data.js` endres. Ikke rediger HTML-filene for hånd — endre `data.js`.
+
+- Alt-tekst på bilder: fyll inn `"alt"` i `data.js` for best resultat; tomme blir «Prosjekt, kunde — bilde N».
+- Egen tittel/beskrivelse for forsiden (valgfritt) i `data.js`: `"seo": {"tittel": "...", "beskrivelse": "..."}`.
+- `del.png` er delingsbildet for forsiden, `logo.png` logoen Google viser.
+- Sidene bruker `<base href="/">`. Forhåndsvis lokalt med `python3 -m http.server` i mappen (ikke ved å åpne filen direkte).
 
 ## Grafisk profil
 

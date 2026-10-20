@@ -114,6 +114,11 @@ def les_data():
 
 def skriv_data(hode, data):
     DATA.write_text(hode + "window.RANDFALS = " + json.dumps(data, ensure_ascii=False, indent=2) + ";\n", encoding="utf-8")
+    try:  # bygg sidene på nytt for søkemotorer (verktoy/seo.py)
+        import seo
+        seo.bygg()
+    except Exception as feil:
+        print("SEO-bygging feilet:", feil)
 
 
 def slug_for(navn):

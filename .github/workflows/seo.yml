@@ -1,0 +1,46 @@
+# RANDFALS — bygger sidene for søkemotorer (verktoy/seo.py) når innholdet endres.
+# Endrer du js/data.js direkte på GitHub, oppdateres prosjektsider, sitemap.xml osv. automatisk.
+name: SEO
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - js/data.js
+      - verktoy/seo.py
+      - CNAME
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: seo
+  cancel-in-progress: false
+
+jobs:
+  bygg:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Bygg sider, sitemap og robots.txt
+        run: python3 verktoy/seo.py
+
+      - name: Lagre endringer
+        run: |
+          git add -A prosjekt *.html sitemap.xml robots.txt
+          if git diff --cached --quiet; then
+            echo "Ingen endringer."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
+            git commit -m "SEO: bygg sider på nytt"
+            git push
+          fi

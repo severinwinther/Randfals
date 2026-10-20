@@ -8,7 +8,9 @@
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-  const lenke = (p) => `prosjekt.html?p=${encodeURIComponent(p.slug)}`;
+  const lenke = (p) => `prosjekt/${encodeURIComponent(p.slug)}/`;
+  // alt-tekst: egen tekst om den finnes, ellers prosjektnavn (+ bildenummer) — samme regel som verktoy/seo.py
+  const altFor = (p, b, n) => b?.alt || [p.tittel, p.undertittel && p.undertittel.toLowerCase() !== p.tittel.toLowerCase() ? p.undertittel : ""].filter(Boolean).join(", ") + (n ? ` — bilde ${n}` : "");
   const nr = (i) => String(i + 1).padStart(2, "0");
 
   const bilde = (b, { lat = true, alt } = {}) =>
@@ -79,7 +81,7 @@
     const grov = matchMedia("(pointer: coarse)").matches;
     const kort = (p, skjult) => `
       <a class="kort" href="${lenke(p)}" data-slug="${esc(p.slug)}"${skjult ? ' aria-hidden="true" tabindex="-1"' : ""} draggable="false">
-        ${bilde(p.forside, { lat: false, alt: skjult ? "" : p.tittel })}
+        ${bilde(p.forside, { lat: false, alt: skjult ? "" : altFor(p, p.forside) })}
         <span class="bt"><b>${esc(p.tittel)}</b><br>${esc(p.undertittel || p.kategori)}</span>
       </a>`;
     const sett = (skjult) => D.prosjekter.map((p) => kort(p, skjult)).join("");
@@ -185,13 +187,13 @@
   }
 
   /* ---------- prosjekt ---------- */
-  function galleri(bilder) {
+  function galleri(bilder, p) {
     let html = "";
     for (let i = 0; i < bilder.length; i++) {
       const b = bilder[i];
       const media = (x) => x.type === "video"
         ? `<video src="${esc(x.src)}"${x.plakat ? ` poster="${esc(x.plakat)}"` : ""}${x.w ? ` width="${x.w}" height="${x.h}"` : ""} muted loop playsinline autoplay preload="metadata"></video>`
-        : bilde(x);
+        : bilde(x, { alt: altFor(p, x, bilder.indexOf(x) + 2) });
       const fig = (x, kl = "") => `<figure class="${kl} vis-ved-scroll">${media(x)}${x.tekst ? `<figcaption>${esc(x.tekst)}</figcaption>` : ""}</figure>`;
       if (b.format === "halv" && bilder[i + 1]?.format === "halv") {
         html += `<div class="g-par">${fig(b)}${fig(bilder[i + 1])}</div>`;
@@ -204,12 +206,12 @@
   }
 
   function prosjekt() {
-    const slug = new URLSearchParams(location.search).get("p");
+    const slug = document.body.dataset.slug || new URLSearchParams(location.search).get("p");
     const i = D.prosjekter.findIndex((p) => p.slug === slug);
     if (i < 0) return ikkeFunnet();
     const p = D.prosjekter[i];
     const neste = D.prosjekter[(i + 1) % D.prosjekter.length];
-    document.title = `${p.tittel} — ${D.navn}`;
+    if (!document.body.dataset.slug) document.title = `${p.tittel} — ${D.navn}`;
     const fakta = { "År": p.aar, "Sted": p.sted, "Kategori": p.kategori, ...(p.fakta || {}) };
 
     app.innerHTML = `
@@ -219,13 +221,13 @@
           <h1 class="p-tittel inn">${esc(p.tittel)}</h1>
           <p class="meta inn" style="--i:1"><span>${nr(i)} / ${nr(D.prosjekter.length - 1)}</span><span>${esc(p.kategori)}</span><span>${esc(p.sted)}</span><span>${esc(p.aar)}</span></p>
         </section>
-        <figure class="hero">${bilde(p.forside, { lat: false })}</figure>
+        <figure class="hero">${bilde(p.forside, { lat: false, alt: altFor(p, p.forside) })}</figure>
         ${p.tekst?.length ? `
         <section class="p-tekst">
           <span class="etikett vis-ved-scroll">Om prosjektet</span>
           <div class="avsnitt vis-ved-scroll">${p.tekst.map((t) => `<p>${esc(t)}</p>`).join("")}</div>
         </section>` : ""}
-        <section class="galleri" aria-label="Bilder">${galleri(p.bilder || [])}</section>
+        <section class="galleri" aria-label="Bilder">${galleri(p.bilder || [], p)}</section>
         <section class="fakta vis-ved-scroll">
           <span class="etikett">Fakta</span>
           <dl>${Object.entries(fakta).filter(([, v]) => v !== "" && v != null).map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join("")}</dl>
@@ -244,6 +246,7 @@
     app.innerHTML = `
       ${nav()}
       <main class="liste">
+        <h1 class="usynlig">Prosjekter — ${esc(D.navn)}</h1>
         <div class="rad-topp inn"><span>Nr</span><span>Prosjekt</span><span class="kat">Kategori</span><span class="sted">Sted</span><span class="aar">År</span></div>
         <div class="liste-rader">
           ${D.prosjekter.map((p, i) => `
@@ -283,6 +286,7 @@
     app.innerHTML = `
       ${nav()}
       <main class="om">
+        <h1 class="usynlig">Om ${esc(D.navn)}</h1>
         <p class="om-tekst inn">${esc(o.tekst)}</p>
         <div class="om-blokk inn" style="--i:2"><span class="etikett">Tjenester</span><ul>${o.tjenester.map((t) => `<li>${esc(t)}</li>`).join("")}</ul></div>
         <div class="om-blokk inn" style="--i:3"><span class="etikett">Finn oss</span><ul>${o.lenker.map((l) => `<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.navn)}</a></li>`).join("")}</ul></div>

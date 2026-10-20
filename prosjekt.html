@@ -1,24 +1,38 @@
 <!doctype html>
-<html lang="no">
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<base href="/">
 <title>Prosjekt — RANDFALS</title>
 <meta name="description" content="Prosjekt fra RANDFALS.">
+<meta name="robots" content="noindex, follow">
+<meta property="og:site_name" content="RANDFALS">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Prosjekt — RANDFALS">
+<meta property="og:description" content="Prosjekt fra RANDFALS.">
+<meta property="og:url" content="https://randfals.com/prosjekt.html">
+<meta property="og:image" content="https://randfals.com/del.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="RANDFALS">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#ffffff">
 <link rel="icon" href="favicon.ico" sizes="32x32">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="sitemap" type="application/xml" href="sitemap.xml">
 <link rel="preload" href="fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/stil.css?v=5">
+<link rel="stylesheet" href="css/stil.css?v=6">
 <script>try{var t=localStorage.getItem("randfals-tema");if(t)document.documentElement.dataset.tema=t}catch(e){}</script>
 <script>try{if(!sessionStorage.getItem("randfals-besok"))document.documentElement.classList.add("laster")}catch(e){}</script>
+<script>var p=new URLSearchParams(location.search).get("p");if(p)location.replace("prosjekt/"+encodeURIComponent(p)+"/"+location.hash)</script>
 </head>
 <body data-side="prosjekt">
-<script src="js/laster.js?v=5"></script>
-<div id="app"></div>
-<noscript><p style="padding:20px">RANDFALS — slå på JavaScript for å se siden.</p></noscript>
-<script src="js/data.js?v=5"></script>
-<script src="js/app.js?v=5"></script>
+<script src="js/laster.js?v=6"></script>
+<div id="app"><header class="nav"><a href="./" class="logo">RANDFALS<i></i></a> <a href="liste.html" class="strek">Index</a> <a href="om.html" class="strek">Om</a> <div class="nav-h"><a href="om.html#kontakt" class="strek">Kontakt</a></div></header><main class="p-topp"><p><a href="liste.html">Se alle prosjekter</a></p></main></div>
+<script src="js/data.js?v=6"></script>
+<script src="js/app.js?v=6"></script>
 </body>
 </html>
